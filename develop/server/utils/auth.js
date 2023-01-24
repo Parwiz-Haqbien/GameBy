@@ -1,6 +1,34 @@
 require("dotenv").config();
 
+//JWT is a standard for securely transmitting information between parties as a JSON object
 const jwt = require(process.env.JWT_WEB_TOKEN);
 
+//used secret key to verify that it was created by the sender and that it has not been tampered with
 const secret = process.env.SECRET_KEY;
-const expiration = process.env.EXPIRATION_TIME
+const expiration = process.env.EXPIRATION_TIME;
+
+module.exports = {
+    authMiddleware: function ({request}) {
+    //checks for token in a POST request data or checks for token in the URL or checks for token in headers. 
+    let token = request.body.token || request.query.token || request.headers.authorization
+     
+    /*splitting the value of token by spaces then pop to retrieve the last item from 
+      the result array then trim to remove any whitespace from the beginning and end of token
+    */
+    if(request.headers.authorization) {
+        token = token.split(' ').pop().trim();
+    }
+    // if no token is handed or returned  upon the request
+    if(!token) {
+        return request
+    }
+    // verifying if the token is valid and verifying the token is not expired
+    try {
+        const { Data } = jwt.verify(token, secret, {maxAge: expiration});
+        req.user = Data;
+    } catch (err) {
+        res.status(400).json(err)
+    }
+    return request
+    }
+}
