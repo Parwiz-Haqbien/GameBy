@@ -40,6 +40,6 @@ const Order = require('./Order');
     return await bcrypt.compare(password, this.password);
   };
 
-  const User = mongoose.Schema.model('User', UserSchema);
+  const User = mongoose.model('User', userSchema);
 
   module.exports = User
