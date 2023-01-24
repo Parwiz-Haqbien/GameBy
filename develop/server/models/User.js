@@ -9,7 +9,8 @@ const Order = require('./Order');
     userName: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        minLength: 6
     },
 
     email: {
