@@ -30,5 +30,11 @@ module.exports = {
         res.status(400).json(err)
     }
     return request
+    },
+    //give token upon signing 
+    signToken: function({userName, email, _id}) {
+        const payload = { userName, email, _id};
+
+        return jwt.sign({ data: payload }, secret, {expiresIn: expiration});
     }
-}
+};
