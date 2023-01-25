@@ -1,6 +1,52 @@
 [
     {
-        "product_name": "Alone in the Dark"
+        "product_name": "Alone in the Dark",
+        "description": "Alone in the Dark is a survival horror video game series originally developed by Infogrames.",
+        "image": "Alone-in-the-Dark.jpg",
+        "category_name": "PlayStation 3",
+        "price": 29.99
         
+    },
+
+    {
+        "product_name": "Assassins Creed ||",
+        "description": "Assassin's Creed is an action-adventure game, set in an open-world environment.",
+        "image": "Assassins-Creed-II.jpg",
+        "category_name": "PlayStation 3",
+        "price": 25.99
+    },
+
+    {
+        "product_name": "BattleField 2",
+        "description": "Players fight in a modern battlefield, using modern weapon systems.",
+        "image": "BattleField-2.jpg",
+        "category_name": "PlayStation 3",
+        "price": 31
+    },
+
+    {
+        "product_name": "BattleField 3",
+        "description": "You play as an elite U.S. Marine Staff Sergeant, Henry Blackburn, and lead your squad alongside U.S.",
+        "image": "BattleField-3.jpg",
+        "category_name": "PlayStation 3",
+        "price": 34.49
+    },
+
+    {
+        "product_name": "Dead to Rights Retribution",
+        "description": "A visually stunning 3rd person action game, rich in story, character and brutal combat.",
+        "image": "Dead-to-Rights-Retribution.jpg",
+        "category_name": "PlayStation 3",
+        "price": 21.99
+    },
+
+    {
+        "product_name": "God of War 3",
+        "description": "An action-adventure game with hack and slash elements.",
+        "image": "God-of-War-3.jpg",
+        "category_name": "PlayStation 3",
+        "price": 39.99
     }
+
+    
 ]
