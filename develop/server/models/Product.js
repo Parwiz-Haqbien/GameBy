@@ -25,9 +25,11 @@ const productSchema = new Schema({
     },
 
     category_name: {
-        type: Schema.Types.ObjectId,
-        ref: 'Category',
-        required: true
+        type: String,
+        Reference: {
+        model: 'Category',
+        key: "id"
+        }
     }
 });
 
