@@ -46,7 +46,39 @@
         "image": "God-of-War-3.jpg",
         "category_name": "PlayStation 3",
         "price": 39.99
-    }
+    },
 
-    
+    {
+        "product_name": "Batman Begins",
+        "description": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+        "image": "batman-begins.jpg",
+        "category_name": "PlayStation 2",
+        "price": 18.59
+    },
+
+    {
+        "product_name": "The godfather",
+        "description": "Set in the 1940s and takes place entirely within the world of the Corleones, a fictional New York Mafia family.",
+        "image": "the-godfather.jpg",
+        "category_name": "PlayStation 2",
+        "price": 22
+    },
+
+    {
+        "product_name": "Transformers the Game",
+        "description": "An action-adventure video game based on the 2007 live-action film Transformers.",
+        "image": "transformers.jpg",
+        "category_name": "PlayStation 2",
+        "price": 19.99
+    },
+
+    {
+        "product_name": "Vice City",
+        "description": "An action-adventure game played from a third-person perspective.",
+        "image": "vice-city.jpg",
+        "category_name": "PlayStation 2",
+        "price": 25
+    }
+  
+  
 ]
