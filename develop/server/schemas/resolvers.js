@@ -119,7 +119,37 @@ const resolvers = {
             const token = signToken(profile);
       
             return { token, profile };
-          }
-    }
-
-}
+          },
+          addUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+      
+            return { token, user };
+          },
+          updateUser: async (parent, args, context) => {
+            if (context.user) {
+              return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+            }
+      
+            throw new AuthenticationError('Not logged in');
+          },
+          addOrder: async (parent, { products }, context) => {
+            console.log(context);
+            if (context.user) {
+              const order = new Order({ products });
+      
+              await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+      
+              return order;
+            }
+      
+            throw new AuthenticationError('Not logged in');
+          },
+          updateProduct: async (parent, { _id, quantity }) => {
+            const decrement = Math.abs(quantity) * -1;
+      
+            return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+          },
+    },
+};
+module.exports = resolvers;
