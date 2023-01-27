@@ -15,7 +15,7 @@ db.once('open', async () => {
         await User.create(userSeed)
 
         await Category.deleteMany({});
-        await User.create(categorySeed)
+        await Category.create(categorySeed)
 
         console.log('data seeded!');
         process.exit(0);
