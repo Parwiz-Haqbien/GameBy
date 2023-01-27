@@ -101,6 +101,25 @@ const resolvers = {
               return { payment: execution.id };
             }
 
+    },
+    Mutation: {
+        login: async (parent, { email, password }) => {
+            const profile = await User.findOne({ email });
+      
+            if (!profile) {
+              throw new AuthenticationError('Profile with this email was not found');
+            }
+      
+            const correctPw = await profile.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw new AuthenticationError('Invalid login credentials. Please check your email and password.');
+            }
+      
+            const token = signToken(profile);
+      
+            return { token, profile };
+          }
     }
 
 }
