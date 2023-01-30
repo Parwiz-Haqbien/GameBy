@@ -1,7 +1,5 @@
-require("dotenv").config();
-
 //JWT is a standard for securely transmitting information between parties as a JSON object
-const jwt = require(process.env.JWT_WEB_TOKEN);
+const jwt = require('jsonwebtoken');
 
 //used secret key to verify that it was created by the sender and that it has not been tampered with
 const secret = process.env.SECRET_KEY;

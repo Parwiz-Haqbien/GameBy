@@ -1,7 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Product, User, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const PayPal = require(process.env.PAYPAL_CLIENT_ID)
+// const PayPal = require('paypal-checkout')
 
 const resolvers = {
     Query: {
@@ -54,52 +54,52 @@ const resolvers = {
       
             throw new AuthenticationError('Not logged in');
           },
-          checkout: async (parent, args, context) => {
-               const url = new URL(context.headers.referer).origin;
-               const order = new Order({ products: args.products });
-               const line_items = [];
+          // checkout: async (parent, args, context) => {
+          //      const url = new URL(context.headers.referer).origin;
+          //      const order = new Order({ products: args.products });
+          //      const line_items = [];
 
-               const { products } = await order.populate('products');
-               for (let i = 0; i < products.length; i++) {
-                //Create a PayPal payment object
-                const payment = await PayPal.payment.create({
-                  intent: 'sale',
-                  payer: {
-                    payment_method: 'paypal'
-                  },
-                  transactions: [{
-                    item_list: {
-                      items: [{
-                        name: products[i].name,
-                        description: products[i].description,
-                        quantity: 1,
-                        price: products[i].price,
-                        currency: 'AUD'
-                      }]
-                    },
-                    amount: {
-                      currency: 'AUD',
-                      total: products[i].price
-                    }
-                  }],
-                  redirect_urls: {
-                    return_url: `${url}/success`,
-                    cancel_url: `${url}/`
-                  }
-                });
+          //      const { products } = await order.populate('products');
+          //      for (let i = 0; i < products.length; i++) {
+          //       //Create a PayPal payment object
+          //       const payment = await PayPal.payment.create({
+          //         intent: 'sale',
+          //         payer: {
+          //           payment_method: 'paypal'
+          //         },
+          //         transactions: [{
+          //           item_list: {
+          //             items: [{
+          //               name: products[i].name,
+          //               description: products[i].description,
+          //               quantity: 1,
+          //               price: products[i].price,
+          //               currency: 'AUD'
+          //             }]
+          //           },
+          //           amount: {
+          //             currency: 'AUD',
+          //             total: products[i].price
+          //           }
+          //         }],
+          //         redirect_urls: {
+          //           return_url: `${url}/success`,
+          //           cancel_url: `${url}/`
+          //         }
+          //       });
             
-                //Add the payment ID to the line_items array
-                line_items.push({
-                  payment: payment.id,
-                });
-              }
+          //       //Add the payment ID to the line_items array
+          //       line_items.push({
+          //         payment: payment.id,
+          //       });
+          //     }
             
-              //Execute the PayPal payment
-              const execution = await PayPal.payment.execute(line_items[0].payment, { payer_id: payerId });
+          //     //Execute the PayPal payment
+          //     const execution = await PayPal.payment.execute(line_items[0].payment, { payer_id: payerId });
             
-              //Return the payment ID
-              return { payment: execution.id };
-            }
+          //     //Return the payment ID
+          //     return { payment: execution.id };
+          //   }
 
     },
     Mutation: {
