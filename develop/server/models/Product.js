@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
   // Setting the criteria for product that will be displayed in the page
 const productSchema = new Schema({
-    product_name: {
+    name: {
        type: String,
        required: true,
        trim: true 

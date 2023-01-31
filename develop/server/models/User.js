@@ -24,7 +24,7 @@ const Order = require('./Order');
         required: true,
         minLength: 7
     },
-    order: [Order.schema]
+    orders: [Order.schema]
   });
 
   // using pre-save Middleware for creating a password
