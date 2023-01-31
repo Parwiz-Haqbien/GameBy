@@ -24,13 +24,11 @@ const productSchema = new Schema({
         min: 0.99
     },
 
-    category_name: {
-        type: String,
-        Reference: {
-        model: 'Category',
-        key: "id"
-        }
-    }
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
+      }
 });
 
 const Product = mongoose.model('Product', productSchema);
