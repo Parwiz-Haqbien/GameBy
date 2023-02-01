@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const ImageSlider = ({slides})  => {
-    const [currentIndex, setCurrentUser] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const sliderStyles = {
         height: '100%',
@@ -39,11 +39,25 @@ const ImageSlider = ({slides})  => {
         cursor: 'pointer'
 
     };
+     const goToPrevious = () => {
+        //checking if we are on the first image
+        const isFirstSlide = currentIndex === 0
+        //if first slide equals to current index then..
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex)
+     };
 
+     const goToNext = () => {
+        //checking if we are on the last slide
+        const isLastSlide = currentIndex === slides.length - 1
+        //if last slide then return 0
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex)
+     }
     return (
         <div style={sliderStyles}>
-            <div style={leftArrowStyle}>❰</div>
-            <div style={rightArrowStyle}>❱</div>
+            <div style={leftArrowStyle} onClick={goToPrevious}>❰</div>
+            <div style={rightArrowStyle} onClick={goToNext}>❱</div>
             <div 
             style={slideStyles}>
             </div>
