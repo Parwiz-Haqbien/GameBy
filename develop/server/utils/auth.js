@@ -6,19 +6,19 @@ const secret = process.env.SECRET_KEY;
 const expiration = process.env.EXPIRATION_TIME;
 
 module.exports = {
-    authMiddleware: function ({request}) {
+    authMiddleware: function ({req}) {
     //checks for token in a POST request data or checks for token in the URL or checks for token in headers. 
-    let token = request.body.token || request.query.token || request.headers.authorization
+    let token = req.body.token || req.query.token || req.headers.authorization
      
     /*splitting the value of token by spaces then pop to retrieve the last item from 
       the result array then trim to remove any whitespace from the beginning and end of token
     */
-    if(request.headers.authorization) {
+    if(req.headers.authorization) {
         token = token.split(' ').pop().trim();
     }
     // if no token is handed or returned  upon the request
     if(!token) {
-        return request
+        return req
     }
     // verifying if the token is valid and verifying the token is not expired
     try {
@@ -27,7 +27,7 @@ module.exports = {
     } catch (err) {
         res.status(400).json(err)
     }
-    return request
+    return req
     },
     //give token upon signing 
     signToken: function({userName, email, _id}) {
