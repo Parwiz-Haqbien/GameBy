@@ -1,4 +1,4 @@
-import ImageSlider from './components/imageSlider'
+import ImageSlider from './components/Slider/imageSlider'
 const App = () => {
     const slides = [
         {url: 'https://ftw.usatoday.com/wp-content/uploads/sites/90/2021/12/gta-online-the-contract-key-art.jpg?w=1000&h=600&crop=1', title: 'GTA5'},
