@@ -7,10 +7,18 @@ const App = () => {
         {url: 'https://twistedvoxel.com/wp-content/uploads/2021/01/ghost-recon-breakpoint-update.jpg', title: 'BREAKPOINT'},
         {url: 'https://cdn.mos.cms.futurecdn.net/THQywijPnGtYYQ9GGYNnu8-1200-80.jpg', title: 'THE LAST OF US'}
     ]
+    const constainerStyles = {
+        width: '500px',
+        height: '280px',
+        margin: '0 auto'
+
+    }
     return (
         <div>
             <h1>Its working</h1>
+            <div style={constainerStyles}>
             <ImageSlider slides={slides}/>
+            </div>
         </div>
     );
 };
