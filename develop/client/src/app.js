@@ -11,6 +11,7 @@ import { setContext } from "@apollo/client/link/context";
 import ImageSlider from "./components/Slider/imageSlider";
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
+import Scroll from "./components/Scroll/scroll"
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -55,14 +56,15 @@ function App() {
     },
   ];
   const containerStyles = {
-    width: "500px",
-    height: "280px",
+    width: "1000px",
+    height: "480px",
     margin: "0 auto",
   };
   return (
     <ApolloProvider client={client}>
       <Router>
         <Header/>
+        <Scroll/>
         <div style={containerStyles}>
           <ImageSlider slides={slides} />
         </div>
