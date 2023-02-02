@@ -16,7 +16,6 @@ const App = () => {
     }
     return (
         <div>
-            <h1>Its working</h1>
             <div style={containerStyles}>
             <ImageSlider slides={slides}/>
             </div>
