@@ -1,4 +1,5 @@
 import React from "react";
+import './footer.css'
 
 const Footer = () => {
   
@@ -30,11 +31,6 @@ const Footer = () => {
             </div>
            </div>
            <hr />
-           <div className="row">
-            <p className="col-sm">
-              &copy;{new Date().getFullYear()} GameBy INC | All right reserved | Terms Of Services | Privacy
-            </p>
-           </div>
         </div>
     </div>
   );
