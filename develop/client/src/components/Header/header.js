@@ -1,5 +1,6 @@
 import React from 'react';
 import Auth from '../../utils/auth';
+import Logo from "../Img/GameBy-logo.png"
 import { Link } from 'react-router-dom'
 
 function Header() {
@@ -36,7 +37,7 @@ function Header() {
      <header className='main-container header'>
         <h1>
             <Link to='/'>
-            <img src="GameBy-logo.png" alt="The Logo" /> 
+            <img src={Logo} className='logo' alt="The Logo" /> 
             </Link>
         </h1>
 

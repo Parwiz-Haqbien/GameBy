@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             {/* Column2*/}
             <div className="col">
-              <h4>STUFF</h4>
+              <h4>STAFF</h4>
                <ul className="list-unstyled">
                <li>Parwiz Haqbien</li>
                </ul>
