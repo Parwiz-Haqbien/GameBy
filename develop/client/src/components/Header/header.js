@@ -1,6 +1,7 @@
 import React from 'react';
 import Auth from '../../utils/auth';
-import Logo from "../Img/GameBy-logo.png"
+import Logo from "../Img/GameByLogo.png"
+import './header.css'
 import { Link } from 'react-router-dom'
 
 function Header() {

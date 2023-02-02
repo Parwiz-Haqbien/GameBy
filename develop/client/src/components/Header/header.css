@@ -1,0 +1,31 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .header {
+    background-color: #00308F;
+    color: #fff;
+  }
+  
+  .logo {
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 12rem;
+  }
+  
+  .display {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  a {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  
