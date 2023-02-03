@@ -12,10 +12,10 @@ body {
   
   .login-box {
     width: 360px;
-    height: 280px;
+    height: 380px;
     margin: auto;
+    background-color: #002D62;
     border-radius: 3px;
-    background-color: white;
   }
   
   h1 {
