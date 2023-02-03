@@ -73,5 +73,4 @@ function App() {
     </ApolloProvider>
   );
 }
-//<Footer />
 export default App;
