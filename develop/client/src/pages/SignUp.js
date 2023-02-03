@@ -34,7 +34,7 @@ function SignUp(props) {
         <input type={'checkbox'} id='chk' aria-hidden='true' />
             <div className='signup'>
                 <form onSubmit={userSubmit}>
-                    <label for='chk' aria-hidden='true'>SignUp</label>
+                    <label htmlFor='chk' aria-hidden='true'>SignUp</label>
 
                     <input 
                     type="userName" 
