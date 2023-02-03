@@ -4,6 +4,10 @@ import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutation';
 import './signUp.css'
+<link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
 function SignUp(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -30,43 +34,40 @@ function SignUp(props) {
     });
   };
   return (
-    <div className='main'>
-        <input type={'checkbox'} id='chk' aria-hidden='true' />
-            <div className='signup'>
-                <form onSubmit={userSubmit}>
-                    <label htmlFor='chk' aria-hidden='true'>SignUp</label>
+    <div className='container'>
+    <div className='signup-box'>
+         <h1>Sign Up</h1>
+     <form onSubmit={userSubmit}>
 
-                    <input 
-                    type="userName" 
-                    name="userName"
-                    id='userName'
-                    placeholder="User Name" 
-                    onChange={handleChange}
-                    required=""
-                    />
+        <label>userName</label>
+        <input 
+        type="text" 
+        placeholder=""
+        id="userName"
+        onChange={handleChange}
+         />
 
-                    <input 
-                    type='email'
-                    name='email'
-                    id='email'
-                    placeholder='Email'
-                    onChange={handleChange}
-                    required=""
-                    />
+        <label>Email</label>
+        <input 
+        type="email" 
+        placeholder="" 
+        id="email"
+        onChange={handleChange}
+        />
 
-                    <input
-                    type="password" 
-                    name="password"
-                    id='pwd'
-                    onChange={handleChange}
-                    placeholder="Password" 
-                    required=""
-                    />
-
-                   <button type='submit'>Sign up</button>
-                </form>
-            </div>
-            <Link to="/login">Login</Link>
+        <label>Password</label>
+        <input 
+        type="password" 
+        placeholder="" 
+        id="password"
+        onChange={handleChange}
+        />
+        <input type="button" value="Submit" />
+      </form>
+      </div>
+    <p className="para-2">
+      Already have an account? <Link to="/login">Login here</Link>
+    </p>
     </div>
   )
 
