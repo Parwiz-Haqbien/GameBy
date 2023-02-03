@@ -12,6 +12,7 @@ import ImageSlider from "./components/Slider/imageSlider";
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
 import Scroll from "./components/Scroll/scroll"
+import SignUp from "./pages/SignUp";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -65,6 +66,12 @@ function App() {
       <Router>
         <Header/>
         <Scroll/>
+        <Routes>
+           <Route
+           path="/signup"
+           element={<SignUp />}
+           />
+        </Routes>
         <div style={containerStyles}>
           <ImageSlider slides={slides} />
         </div>

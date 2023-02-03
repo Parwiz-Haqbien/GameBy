@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutation';
+import './signUp.css'
 
 function SignUp(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -14,7 +15,7 @@ function SignUp(props) {
       variables: {
         email: formState.email,
         password: formState.password,
-        userName: formState.firstName,
+        userName: formState.userName,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -28,5 +29,46 @@ function SignUp(props) {
       [name]: value,
     });
   };
+  return (
+    <div className='main'>
+        <input type={'checkbox'} id='chk' aria-hidden='true' />
+            <div className='signup'>
+                <form onSubmit={userSubmit}>
+                    <label for='chk' aria-hidden='true'>SignUp</label>
+
+                    <input 
+                    type="userName" 
+                    name="userName"
+                    id='userName'
+                    placeholder="User Name" 
+                    onChange={handleChange}
+                    required=""
+                    />
+
+                    <input 
+                    type='email'
+                    name='email'
+                    id='email'
+                    placeholder='Email'
+                    onChange={handleChange}
+                    required=""
+                    />
+
+                    <input
+                    type="password" 
+                    name="password"
+                    id='pwd'
+                    onChange={handleChange}
+                    placeholder="Password" 
+                    required=""
+                    />
+
+                   <button type='submit'>Sign up</button>
+                </form>
+            </div>
+            <Link to="/login">Login</Link>
+    </div>
+  )
 
 }
+export default SignUp
