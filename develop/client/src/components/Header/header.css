@@ -21,6 +21,9 @@
     display: inline-block;
     margin-left: 20px;
   }
+  .icons:hover {
+    color: darkred;
+  }
   
   a {
     font-size: 20px;

@@ -1,4 +1,6 @@
 import React from 'react';
+import {FaUserAlt} from 'react-icons/fa'
+import {FiLogIn, FiUserPlus} from 'react-icons/fi'
 import Auth from '../../utils/auth';
 import Logo from "../Img/GameByLogo.png"
 import './header.css'
@@ -12,7 +14,7 @@ function Header() {
            <ul className='main-container'>
               <li className='display'>
                 <a href='/' onClick={() => Auth.logout()}>
-                    Logout
+                    <FiLogIn className='icons'/>
                 </a>
               </li>
            </ul>
@@ -22,12 +24,12 @@ function Header() {
             <ul className='main-container'>
                 <li className='display'>
                     <Link to='/signup'>
-                        SignUp
+                    <FiUserPlus className='icons'/>
                     </Link>
                     </li>
                 <li className='display'>
                     <Link to='/login'>
-                        Login
+                    <FaUserAlt className='icons'/>
                     </Link>
                 </li>
             </ul>
