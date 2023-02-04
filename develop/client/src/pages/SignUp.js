@@ -61,11 +61,11 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="signup">
+        <div className="userInput">
           <button type="submit">SignUp</button>
         </div>
       </form>
-          <p>
+          <p className='para-2'>
       Already have an account? <Link to="/login">Login here</Link>
     </p>
     </div>

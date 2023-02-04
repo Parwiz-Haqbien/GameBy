@@ -57,11 +57,11 @@ function Login(props) {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <div className="Login">
+        <div className="userInput">
           <button type="submit">Login</button>
         </div>
       </form>
-      <p>
+      <p className='para-2'>
       Not have an account? <Link to="/signup">Sign Up Here</Link>
     </p>
     </div>
