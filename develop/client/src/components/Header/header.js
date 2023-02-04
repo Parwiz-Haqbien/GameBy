@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaUserAlt} from 'react-icons/fa'
+import {HiInformationCircle} from 'react-icons/hi'
 import {FiLogIn, FiUserPlus} from 'react-icons/fi'
 import Auth from '../../utils/auth';
 import Logo from "../Img/GameByLogo.png"
@@ -22,6 +23,11 @@ function Header() {
     } else {
         return (
             <ul className='main-container'>
+                <li className='display'>
+                <Link to='/about'>
+                <HiInformationCircle className='icons'/>
+                </Link>
+            </li>
                 <li className='display'>
                     <Link to='/signup'>
                     <FiUserPlus className='icons'/>
