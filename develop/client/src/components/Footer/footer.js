@@ -7,6 +7,7 @@ const Footer = () => {
     <div className="main-footer">
         <div className="container">
            <div className="row">
+            
             {/* Column1*/}
             <div className="col1">
               <h4>GameBy INC</h4>
@@ -15,6 +16,7 @@ const Footer = () => {
                 <li>Melbourne, Australia</li>
                </ul>
             </div>
+            
             {/* Column2*/}
             <div className="col">
               <h4>STAFF</h4>
@@ -22,6 +24,7 @@ const Footer = () => {
                <li>Parwiz Haqbien</li>
                </ul>
             </div>
+
             {/* Column3*/}
             <div className="col">
               <h4>Contact Me</h4>

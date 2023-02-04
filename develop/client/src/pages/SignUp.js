@@ -4,12 +4,8 @@ import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutation';
 import './user.css'
-<link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
 
-function SignUp(props) {
+function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
@@ -34,42 +30,46 @@ function SignUp(props) {
     });
   };
   return (
-    <div className='container'>
-    <div className='signup-box'>
-         <h1>Sign Up</h1>
-     <form onSubmit={userSubmit}>
+    <div className="signup-box">
 
-        <label>userName</label>
-        <input 
-        type="text" 
-        placeholder=""
-        id="userName"
-        onChange={handleChange}
-         />
-
-        <label>Email</label>
-        <input 
-        type="email" 
-        placeholder="" 
-        id="email"
-        onChange={handleChange}
-        />
-
-        <label>Password</label>
-        <input 
-        type="password" 
-        placeholder="" 
-        id="password"
-        onChange={handleChange}
-        />
-        <input type="button" value="Submit" />
+      <h2>Signup</h2>
+      <form onSubmit={userSubmit}>
+        <div className="userName">
+          <label htmlFor="userName">userName</label>
+          <input
+            name="userName"
+            type="userName"
+            id="userName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="email">
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="password">
+          <label htmlFor="pwd">Password</label>
+          <input
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="signup">
+          <button type="submit">SignUp</button>
+        </div>
       </form>
-      </div>
-    <p className="para-2">
+          <p>
       Already have an account? <Link to="/login">Login here</Link>
     </p>
     </div>
-  )
-
+  );
 }
-export default SignUp
+
+export default Signup;

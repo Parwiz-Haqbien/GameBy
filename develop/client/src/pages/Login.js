@@ -29,37 +29,39 @@ function Login(props) {
       [name]: value,
     });
   };
-  
+
   return (
-    <div className='container'>
     <div className="login-box">
-      <h1>Login</h1>
-      <form onSubmit={userSubmit} >
-
-        <label>Email</label>
-        <input 
-        type="email" 
-        placeholder="" 
-        id="email"
-        onChange={handleChange}
-        />
-
-        <label>Password</label>
-        <input 
-        type="password" 
-        placeholder="" 
-        id="pwd"
-        onChange={handleChange}
-        />
+      <h2>Login</h2>
+      <form onSubmit={userSubmit}>
+        <div className="email">
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="password">
+          <label htmlFor="pwd">Password</label>
+          <input
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
         {error ? (
           <div>
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <input type="button" value="Submit" />
+        <div className="Login">
+          <button type="submit">Login</button>
+        </div>
       </form>
-    </div>
-    <p className="para-2">
+      <p>
       Not have an account? <Link to="/signup">Sign Up Here</Link>
     </p>
     </div>
