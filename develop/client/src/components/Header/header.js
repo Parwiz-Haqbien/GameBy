@@ -13,6 +13,13 @@ function Header() {
        if(Auth.loggedIn()) {
         return (
            <ul className='main-container'>
+
+            <li className='display'>
+                <Link to='/about'>
+                <HiInformationCircle className='icons'/>
+                </Link>
+            </li>
+
               <li className='display'>
                 <a href='/' onClick={() => Auth.logout()}>
                     <FiLogIn className='icons'/>
@@ -24,15 +31,12 @@ function Header() {
         return (
             <ul className='main-container'>
                 <li className='display'>
-                <Link to='/about'>
-                <HiInformationCircle className='icons'/>
-                </Link>
-            </li>
-                <li className='display'>
+                    
                     <Link to='/signup'>
                     <FiUserPlus className='icons'/>
                     </Link>
                     </li>
+
                 <li className='display'>
                     <Link to='/login'>
                     <FaUserAlt className='icons'/>
