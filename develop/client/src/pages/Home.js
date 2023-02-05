@@ -34,12 +34,12 @@ const slides = [
 const Home = () => {
   return (
     <div className="container">
-        {/* <Scroll />
+        <Scroll />
         <div style={containerStyles}>
           <ImageSlider slides={slides} />
-        </div> */}
+        </div>
         <ProductList/>
-        {/* <Footer /> */}
+        <Footer />
     </div>
   );
 };
