@@ -18,11 +18,8 @@ export const ADD_ORDER = gql`
       products {
         _id
         name
-        description
         price
-        category {
-          name
-        }
+        quantity
       }
     }
   }
