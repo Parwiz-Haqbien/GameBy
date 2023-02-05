@@ -11,6 +11,7 @@ const typeDefs = gql `
     name: String
     description: String
     image: String
+    quantity: Int
     price: Float
     category: Category
   }
@@ -50,6 +51,7 @@ const typeDefs = gql `
     addUser(userName: String!, email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
     updateUser(userName: String, email: String, password: String): User
+    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
   }
 `;

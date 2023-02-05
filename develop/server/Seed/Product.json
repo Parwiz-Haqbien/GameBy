@@ -4,6 +4,7 @@
         "description": "Alone in the Dark is a survival horror video game series originally developed by Infogrames.",
         "image": "Alone-in-the-Dark.jpg",
         "category_name": "PlayStation 3",
+        "quantity": 1,
         "price": 29.99
         
     },
@@ -13,6 +14,7 @@
         "description": "Assassin's Creed is an action-adventure game, set in an open-world environment.",
         "image": "Assassins-Creed-II.jpg",
         "category_name": "PlayStation 3",
+        "quantity": 2,
         "price": 25.99
     },
 
@@ -21,6 +23,7 @@
         "description": "Players fight in a modern battlefield, using modern weapon systems.",
         "image": "BattleField-2.jpg",
         "category_name": "PlayStation 3",
+        "quantity": 3,
         "price": 31
     },
 
@@ -29,6 +32,7 @@
         "description": "You play as an elite U.S. Marine Staff Sergeant, Henry Blackburn, and lead your squad alongside U.S.",
         "image": "BattleField-3.jpg",
         "category_name": "PlayStation 3",
+        "quantity": 1,
         "price": 34.49
     },
 
@@ -37,6 +41,7 @@
         "description": "A visually stunning 3rd person action game, rich in story, character and brutal combat.",
         "image": "Dead-to-Rights-Retribution.jpg",
         "category_name": "PlayStation 3",
+        "quantity": 4,
         "price": 21.99
     },
 
@@ -45,6 +50,7 @@
         "description": "An action-adventure game with hack and slash elements.",
         "image": "God-of-War-3.jpg",
         "category_name": "PlayStation 3",
+        "quantity": 1,
         "price": 39.99
     },
 
@@ -53,6 +59,7 @@
         "description": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
         "image": "batman-begins.jpg",
         "category_name": "PlayStation 2",
+        "quantity": 5,
         "price": 18.59
     },
 
@@ -61,6 +68,7 @@
         "description": "Set in the 1940s and takes place entirely within the world of the Corleones, a fictional New York Mafia family.",
         "image": "the-godfather.jpg",
         "category_name": "PlayStation 2",
+        "quantity": 6,
         "price": 22
     },
 
@@ -77,6 +85,7 @@
         "description": "An action-adventure game played from a third-person perspective.",
         "image": "vice-city.jpg",
         "category_name": "PlayStation 2",
+        "quantity": 1,
         "price": 25
     }
   
