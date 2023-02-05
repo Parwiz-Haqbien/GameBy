@@ -5,7 +5,7 @@ import {
   CLEAR_CART,
   TOGGLE_CART_VISIBILITY,
   REPLACE_PRODUCTS
-} from "./actions";
+} from "./index";
 
 export const reducer = (state, action) => {
   switch (action.type) {

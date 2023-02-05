@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/globalState";
 import { ADD_TO_CART} from "../../utils/index";
-import { idbPromise } from "../../utils/helpers";
+import { indexedDBRequest } from "../../utils/helpers";
 
-function ProductItem(item) {
+function ProductCard(item) {
   const [dispatch] = useStoreContext();
 
   const {
@@ -19,7 +19,7 @@ function ProductItem(item) {
         type: ADD_TO_CART,
         product: { ...item, purchaseQuantity: 1 }
     });
-    idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    indexedDBRequest('cart', 'put', { ...item, purchaseQuantity: 1 });
 }
 
 
@@ -40,4 +40,4 @@ function ProductItem(item) {
   );
 }
 
-export default ProductItem;
+export default ProductCard;

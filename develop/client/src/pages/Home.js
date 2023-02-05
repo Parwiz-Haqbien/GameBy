@@ -1,6 +1,7 @@
 import React from "react";
 import Scroll from '../components/Scroll/scroll'
 import Footer from "../components/Footer/footer";
+import ProductList from "../components/productList/productList";
 import ImageSlider from "../components/Slider/imageSlider";
 
 const slides = [
@@ -37,6 +38,7 @@ const Home = () => {
         <div style={containerStyles}>
           <ImageSlider slides={slides} />
         </div>
+        <ProductList/>
         <Footer />
     </div>
   );
