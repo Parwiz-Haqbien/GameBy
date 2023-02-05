@@ -1,90 +1,71 @@
 [
     {
-        "product_name": "Alone in the Dark",
-        "description": "Alone in the Dark is a survival horror video game series originally developed by Infogrames.",
+        "name": "Alone in the Dark",
         "image": "Alone-in-the-Dark.jpg",
-        "category_name": "PlayStation 3",
         "quantity": 1,
         "price": 29.99
         
     },
 
     {
-        "product_name": "Assassins Creed ||",
-        "description": "Assassin's Creed is an action-adventure game, set in an open-world environment.",
+        "name": "Assassins Creed ||",
         "image": "Assassins-Creed-II.jpg",
-        "category_name": "PlayStation 3",
         "quantity": 2,
         "price": 25.99
     },
 
     {
-        "product_name": "BattleField 2",
-        "description": "Players fight in a modern battlefield, using modern weapon systems.",
+        "name": "BattleField 2",
         "image": "BattleField-2.jpg",
-        "category_name": "PlayStation 3",
         "quantity": 3,
         "price": 31
     },
 
     {
-        "product_name": "BattleField 3",
-        "description": "You play as an elite U.S. Marine Staff Sergeant, Henry Blackburn, and lead your squad alongside U.S.",
-        "image": "BattleField-3.jpg",
-        "category_name": "PlayStation 3",
+        "name": "BattleField 3",
+        "image": "BattleField-3 .jpg",
         "quantity": 1,
         "price": 34.49
     },
 
     {
-        "product_name": "Dead to Rights Retribution",
-        "description": "A visually stunning 3rd person action game, rich in story, character and brutal combat.",
+        "name": "Dead to Rights Retribution",
         "image": "Dead-to-Rights-Retribution.jpg",
-        "category_name": "PlayStation 3",
         "quantity": 4,
         "price": 21.99
     },
 
     {
-        "product_name": "God of War 3",
-        "description": "An action-adventure game with hack and slash elements.",
+        "name": "God of War 3",
         "image": "God-of-War-3.jpg",
-        "category_name": "PlayStation 3",
         "quantity": 1,
         "price": 39.99
     },
 
     {
-        "product_name": "Batman Begins",
-        "description": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+        "name": "Batman Begins",
         "image": "batman-begins.jpg",
-        "category_name": "PlayStation 2",
         "quantity": 5,
         "price": 18.59
     },
 
     {
-        "product_name": "The godfather",
-        "description": "Set in the 1940s and takes place entirely within the world of the Corleones, a fictional New York Mafia family.",
+        "name": "The godfather",
         "image": "the-godfather.jpg",
-        "category_name": "PlayStation 2",
         "quantity": 6,
         "price": 22
     },
 
     {
-        "product_name": "Transformers the Game",
-        "description": "An action-adventure video game based on the 2007 live-action film Transformers.",
+        "name": "Transformers the Game",
         "image": "transformers.jpg",
-        "category_name": "PlayStation 2",
+        "quantity": 2,
         "price": 19.99
     },
 
     {
-        "product_name": "Vice City",
-        "description": "An action-adventure game played from a third-person perspective.",
+        "name": "Vice City",
         "image": "vice-city.jpg",
-        "category_name": "PlayStation 2",
         "quantity": 1,
         "price": 25
     }
