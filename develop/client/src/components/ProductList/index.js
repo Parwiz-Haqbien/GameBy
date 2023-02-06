@@ -35,7 +35,7 @@ function ProductList() {
   
   return (
   <div className="container">
-  {products.length ? (
+  {Array.isArray(products) && products.length ? (
   <div className="productCard">
      {Array.isArray(products) ? products.map((product) => (
              <ProductItem
