@@ -7,7 +7,7 @@ query getProducts {
     name
     price
     quantity
-    url
+    image
   }
 }
 `;
@@ -43,7 +43,7 @@ export const QUERY_USER = gql`
           name
           price
           quantity
-          url
+          image
         }
       }
     }

@@ -30,16 +30,14 @@ function ProductList() {
   }
   }, [data, loading, dispatch]);
 
-  function allProducts() {
-    return state.products;
-  }
-  
+ 
+  const products = state.products.filter((product) => product);
   
   return (
   <div className="container">
-  {state.products.length ? (
+  {products.length ? (
   <div className="productCard">
-     {allProducts().map((product) => (
+     {Array.isArray(products) ? products.map((product) => (
              <ProductItem
              key={product._id}
              _id={product._id}
@@ -48,7 +46,7 @@ function ProductList() {
              price={product.price}
              quantity={product.quantity}
            />
-  ))}
+  )) : null}
   </div>
   ) : (
   <h3>No added any products yet</h3>
