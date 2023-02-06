@@ -1,10 +1,4 @@
 
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -34,8 +28,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Gameby is an online ecommerce store that specializes in selling games for the Playstation 3 (PS3) and Playstation 2 (PS2) consoles. The store offers a wide variety of games for both consoles, allowing customers to find their favorite titles with ease. With its user-friendly interface, customers can easily browse and purchase their desired games from the comfort of their own homes. Gameby prides itself on providing high-quality products and excellent customer service to ensure a seamless shopping experience for its customers. Whether you're a casual gamer or a hardcore enthusiast, Gameby has the perfect selection of PS3 and PS2 games to choose from.
 
 
@@ -47,10 +39,9 @@ Gameby is an online ecommerce store that specializes in selling games for the Pl
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![MongoDB][mongodb.com]][mongodb-url]
-* [![nodejs][nodejs.org]][nodejs-url]
+* MERN STACK
+* JWT
+* BOOTSTRAP
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,7 +98,7 @@ Purchasing Games: Customers can purchase games for their PS3 and PS2 consoles th
 ## Roadmap
 
 - [x] Add Login/SignUp
-- [x] Display cards
+- [ ] Display cards
 - [ ] Add a shopping card
 - [ ] checkout page
 

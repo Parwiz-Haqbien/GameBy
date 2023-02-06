@@ -38,7 +38,7 @@ const Home = () => {
         <div style={containerStyles}>
           <ImageSlider slides={slides} />
         </div>
-        <ProductList/>
+        {/* <ProductList/> */}
         <Footer />
     </div>
   );
